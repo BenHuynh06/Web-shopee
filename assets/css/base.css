@@ -34,3 +34,14 @@ html {
     flex-wrap: wrap; /* Tổng độ dài vượt quá thì sẽ xuống hàng */
 }
 
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
