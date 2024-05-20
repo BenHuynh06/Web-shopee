@@ -1,0 +1,36 @@
+/* CSS những thành phần có cấu hình chung */
+:root {
+    --text-color:#333;
+    --white-color:#fff;
+    --black-color:#000;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/* RESPONSIVE */
+.grid {
+    width: 1850px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* Trong trường hợp không muốn sử dụng width 1200px */
+.grid__full-width {
+    width: 100%;
+}
+
+/* Những thẻ nằm trong class này đều nằm trên hàng ngang */
+.grid__row {
+    display: flex;
+    flex-wrap: wrap; /* Tổng độ dài vượt quá thì sẽ xuống hàng */
+}
+
