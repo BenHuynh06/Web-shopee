@@ -57,6 +57,10 @@
     display: block;
 }
 
+.header__item--open-notify:hover .header__notify {
+    display: block;
+}
+
 /* ============================================== */
 
 /* Phần gạch ngăn cách giữa các thành phần */
@@ -137,3 +141,136 @@
 .header__qr-download {
     height: 16px;
 }
+
+/* ================================================= */
+
+/* Phần Notification */
+.header__notify {
+    right: 0;
+    top: 120%;
+    width: 404px;
+    display: none;
+    position: absolute;
+    border: 1px solid #d3d3d3;
+    will-change: opacity, transform;
+    animation: Notify ease-in-out 0.2s;
+    background-color: var(--white-color);
+    transform-origin: calc(100% - 25px) top;
+}   
+
+/* =========================== */
+/* Animation cho Notification */
+@keyframes Notify {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* =============================== */
+
+/* =================================== */
+/* Tạo element giả */
+.header__notify::before {
+    top: -30px;
+    right: 0;
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 20px 25px;
+    border-color: transparent transparent var(--white-color) transparent;
+}
+
+.header__notify::after {
+    right: 0;
+    top: -13px;
+    content: "";
+    width: 90px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    
+}
+/* ===================================== */
+
+.header__notify-header {
+    height: 40px;
+    background-color: var(--white-color);
+}
+
+.header__notify-header h3 {
+    color: #999;
+    cursor: default;
+    font-weight: 400;
+    user-select: none;
+    font-size: 1.6rem;
+    line-height: 40px;
+    margin: 0 0 0 12px;
+}
+
+.header__notify-list {
+    padding-left: 0;
+}
+
+.header__notify-item:hover {
+    background-color: #f7f7f7;
+}
+
+.header__notify-item--view {
+    background-color: rgb(238, 75, 43, 0.1);
+}
+
+.header__notify-link {
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.header__notify-info {
+    flex: 1;
+    margin-left: 12px;
+}
+
+.header__notify-img {
+    width: 48px;
+    object-fit: contain;
+}
+
+.header__notify-name {
+    display: block;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--black-color);
+}
+
+.header__notify-desc {
+    display: block;
+    color: #756f6e;
+    font-size: 1.2rem;
+    margin-top: 4px;
+}
+
+/* ============================================== */
+
+/* Phần Footer của Notification */
+.header__notify-footer {
+    display: flex;
+}
+
+.header__notify-btn {
+    width: 100%;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+/* ================================================= */
