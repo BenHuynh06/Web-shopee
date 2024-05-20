@@ -44,7 +44,8 @@
 }
 
 .header__item:hover,
-.header__item-link:hover {
+.header__item-link:hover,
+.header__navbar-icon:hover {
     cursor: pointer;
     color: rgba(255, 255, 255, 0.7);
 }
@@ -71,4 +72,12 @@
 .header__navbar-icon {
     font-size: 1.8rem; /* Tương đương 18px */
     margin: 0 4px;
+}
+
+/* ============================================= */
+
+/* CSS phần cho chữ kết nối không thể bấm */
+.header__item-label--nopointer {
+    cursor: text;
+    color: var(--white-color);
 }
