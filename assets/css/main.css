@@ -61,6 +61,14 @@
     display: block;
 }
 
+.btn--icon,
+.auth-form--fb,
+.auth-form--google,
+.auth-form__socials {
+    display: flex;
+    align-items: center;
+}
+
 /* ============================================== */
 
 /* Phần gạch ngăn cách giữa các thành phần */
@@ -274,3 +282,139 @@
 }
 
 /* ================================================= */
+
+/* ===================================================== */
+/* Phần Modal Authen */
+.auth-form__container {
+    padding: 0 32px;
+}
+
+.auth-form {
+    width: 500px;
+}
+
+/* Thẻ chứ đăng ký và đăng nhập */
+.auth-form__header {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Đăng ký */
+.auth-form__heading {
+    font-weight: 500;
+    font-size: 2.2rem;
+    color: var(--text-color);
+}
+
+/* Đăng nhập */
+.auth-form__switch-btn {
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+}
+
+/* Phần Auth input */
+.auth-form__infor {
+    margin-top: 16px;
+}
+
+/* Phần input */
+.auth-form__input {
+    width: 100%;
+    height: 40px;
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+}
+
+.auth-form__aside { 
+    font-weight: 400;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1.6rem;
+}
+
+.auth-form__policy-link {
+    color: red;
+    text-decoration: none;
+}
+
+/* Thẻ chứa btn */
+.auth-form__controls {
+    display: flex;
+    margin: 16px 0;
+    justify-content: space-evenly;
+    
+}
+
+/* Phần nút trở lại & đăng ký */
+.btn {
+    width: 40%;
+    border: none;
+    height: 35px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    border-radius: 20px;
+    background-color: var(--white-color);
+}
+
+.btn--primary {
+    width: 100%;
+    font-weight: 500;
+    background-color: #ccc;
+    color: var(--primary-color);
+}
+
+/* Hover cho nút đăng ký */
+.btn--primary:hover {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    
+}
+
+.auth-form__footer {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.auth-form__had-account {
+    color: #ccc;
+    font-weight: 200;
+}
+
+.auth-form__btn {
+    font-weight: 500;
+    margin-left: 2px;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* Phần social */
+.auth-form__socials {
+    display: flex;
+    margin-left: 35px;
+    margin-bottom: 14px;
+    justify-content: space-evenly;
+}
+
+/* Phần btn social */
+.btn--icon {
+    font-weight: 450; 
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+
+/* Icon Facebook */
+.auth-form--fb {
+    color: blue;
+    font-size: 1.9rem;
+}
+
+.auth-form--fb, 
+.auth-form--google {
+    margin-right: 8px;
+}
+
+/* ======================================================= */

@@ -3,7 +3,8 @@
     --text-color:#333;
     --white-color:#fff;
     --black-color:#000;
-    --primary-color: #ee4d2d rgb(238, 75, 43);
+    --primary-color: #ee4d2d;
+    /* rgb(238, 75, 43) */
 }
 
 *{
