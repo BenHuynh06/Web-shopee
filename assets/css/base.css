@@ -71,3 +71,11 @@ html {
     position: relative;
     background-color: #fff;
 }
+
+/* Phần disable nếu như chưa điền đủ thông tin khi nào cần dùng thì sử dụng*/
+.disable {
+    color: #949494;
+    cursor: default;
+    background-color: #c3c3c3;
+}
+/* ================================================ */
