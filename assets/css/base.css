@@ -67,9 +67,7 @@ html {
 .modal__body {
     z-index: 1;
     margin: auto;
-    border-radius: 10px;
     position: relative;
-    background-color: #fff;
 }
 
 /* Phần disable nếu như chưa điền đủ thông tin khi nào cần dùng thì sử dụng*/
