@@ -5,6 +5,9 @@
     --black-color:#000;
     --primary-color: #ee4d2d;
     /* rgb(238, 75, 43) */
+    --navbar-height: 34px;
+    --header-height: 120px;
+    --header-subnav: calc(var(--header-height) - var(--navbar-height));
 }
 
 *{
@@ -36,7 +39,7 @@ html {
     flex-wrap: wrap; /* Tổng độ dài vượt quá thì sẽ xuống hàng */
 }
 
-/* Animation */
+/* Animation cho QR code, Modal*/
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -47,20 +50,50 @@ html {
     }
 }
 
+/* Animation cho Notification */
+@keyframes Notify {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animation dùng chung cho những thằng cần scale */
+@keyframes growth {
+    from {
+        transform: scale(var(--_growth-from));
+    }
+    to {
+        transform: scale(var(--_growth-to));
+    }
+}
+
+/* ===================================================== */
+
 /* Modal */
 .modal {
+    display: none;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    display: flex;
+    /* display: flex; */
     position: fixed;
+    animation: fadeIn linear 0.2s;
 }
 
 .modal__overlay {
     width: 100%;
     height: 100%;
+    --_growth-to: 1;
     position: absolute;
+    --_growth-from: 70%;
+    animation: growth linear .1s;
     background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -77,3 +110,11 @@ html {
     background-color: #c3c3c3;
 }
 /* ================================================ */
+
+/* btn--primary */
+.btn--primary {
+    width: 100%;
+    outline: none;
+    font-weight: 500;
+    color: var(--primary-color);
+}
